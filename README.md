@@ -24,7 +24,7 @@ This library simulates the Gray-Scott reaction-diffusion model, which is a mathe
 Clone this repository or download the files directly:
 
 ```bash
-git clone https://github.com/yourusername/reaction-diffusion.git
+git clone https://github.com/brutallyminimal/reaction-diffusion-js.git
 ```
 
 ## Basic Usage
@@ -219,6 +219,7 @@ MIT License
 This implementation is inspired by various reaction-diffusion resources and projects:
 - Karl Sims' [Reaction-Diffusion Tutorial](https://www.karlsims.com/rd.html)
 - [pmneila's WebGL Reaction-Diffusion](https://github.com/pmneila/jsexp)
+- [DiegoOchoaa's implementation](https://github.com/DiegoOchoaa/Reaction-Diffusion)
 
 ## Contributing
 
