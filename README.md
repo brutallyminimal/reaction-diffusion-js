@@ -2,7 +2,7 @@
 
 A lightweight, customizable JavaScript library for creating beautiful reaction-diffusion patterns in the browser using WebGL and Three.js.
 
-![Reaction Diffusion Simulation](data/thumbnail.jpg)
+![Reaction Diffusion Simulation demo](https://vinodramamoorthy.com/reaction-diffusion-js/)
 
 ## Overview
 
