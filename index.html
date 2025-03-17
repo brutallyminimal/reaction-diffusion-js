@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaction Diffusion Simulation</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div id="canvas-container">
+      <!-- The animation will render here -->
+    </div>
+  
+  <script type="module">
+    import { initSimulation, updateColors, resetSimulation, clearSimulation, config } from './reaction-diffusion.js';
+    
+    // Configure the simulation
+    const simulationConfig = {
+      // Simulation parameters
+      dA: 0.45,      // Diffusion rate for substance A
+      dB: 1.0,       // Diffusion rate for substance B
+      feed: 0.054444,  // Feed rate
+      kill: 0.064555,  // Kill rate
+      size: 0.025,   // Brush size (will be automatically increased on mobile)
+      speed: 50,     // Simulation speed (will be automatically increased on mobile)
+      
+      // Color configuration (hex values)
+      backgroundColorHex: '#FFFFFF', // Background color (white)
+      patternColorHex: '#000000'     // Pattern color (black)
+    };
+    
+    // Initialize the simulation when the page loads
+    window.addEventListener('load', () => {
+      initSimulation(simulationConfig);
+      
+      // Optional: Add keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        // Press 'r' to reset
+        if (e.key === 'r') resetSimulation();
+        
+        // Press 'c' to clear
+        if (e.key === 'c') clearSimulation();
+        
+        // Press '1' to set classic black and white
+        if (e.key === '1') updateColors('#fffff6', '#73e516');
+        
+        // Press '2' to set blue on white
+        if (e.key === '2') updateColors('#73e516', '#fffff6');
+        
+        // Press '3' to set teal and coral
+        if (e.key === '3') updateColors('#00DDFF', '#FF5533');
+      });
+    });
+    
+    // Make functions available globally for user interaction
+    window.resetSimulation = resetSimulation;
+    window.clearSimulation = clearSimulation;
+    window.updateColors = updateColors;
+  </script>
+</body>
+</html>
